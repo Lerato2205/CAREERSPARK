@@ -140,12 +140,12 @@
 
 <section class="login-section">
     <h1>Login to Your Account</h1>
-    <form action="dashboard.html" method="post"> <!-- Replace with the actual action -->
+    <form id="loginForm">
         <div>
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
         </div>
         <div>
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
         </div>
         <button type="submit">Log In</button>
     </form>
@@ -154,6 +154,23 @@
 <footer>
     <p>&copy; 2024 Career Spark. All rights reserved.</p>
 </footer>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Perform form validation if needed
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        if(email && password) {
+            // Redirect to dashboard.html after validation
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Please fill in both fields.");
+        }
+    });
+</script>
 
 </body>
 </html>
