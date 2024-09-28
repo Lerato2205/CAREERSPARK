@@ -153,11 +153,16 @@
     <h2>Contact Us</h2>
     <p>If you have any questions or need assistance, please fill out the form below or contact us directly.</p>
 
-    <form>
+
+    <form target="_blank" action="https://formsubmit.co/chitayalerato22@gmail.com" method="POST">
+        <!-- Ensure all form fields are included -->
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+
+        <!-- Add the _replyto field to get the sender's email -->
+        <input type="hidden" name="_replyto" value="{{email}}">
+        <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
     </form>
 
     <div class="contact-info">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Guidance - Career Spark</title>
+    <title>Freelancing - Career Spark</title>
     <style>
         /* General body and background */
         body {
@@ -111,6 +111,25 @@
             text-decoration: underline;
         }
 
+        /* Card styling for freelance gigs */
+        .gig-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            color: #FFFFFF;
+        }
+
+        .gig-card h4 {
+            font-size: 24px;
+            color: #FF5D92;
+            margin-bottom: 10px;
+        }
+
+        .gig-card p {
+            margin-bottom: 10px;
+        }
+
         /* Footer styling */
         footer {
             background: transparent;
@@ -159,29 +178,37 @@
 </header>
 
 <section class="section-container">
-    <div class="opportunity-section">
-        <h2>Career Guidance</h2>
-        <p>Discover various career paths, take assessments to match your personality to the right job, and get career advice tailored to your needs.</p>
-
-        <!-- Career Paths Section -->
+    
+        <!-- Freelance Gig Listings Section -->
         <div class="sub-section">
-            <h3>Career Paths</h3>
-            <p>Explore different career paths in various industries, understand growth potential, and learn about required qualifications for each path.</p>
-            <a href="#">Learn More About Career Paths</a>
-        </div>
+            <h3>Available Freelance Gigs</h3>
 
-        <!-- Personality & Skill Assessments Section -->
-        <div class="sub-section">
-            <h3>Personality & Skill Assessments</h3>
-            <p>Take quizzes and assessments to help you discover careers that match your personality and skill set. These tools guide you toward a fulfilling career.</p>
-            <a href="assessment.html">Take an Assessment</a>
-        </div>
+            <!-- Gig 1 -->
+            <div class="gig-card">
+                <h4>Web Developer</h4>
+                <p>Platform: Upwork</p>
+                <p>Description: Create a custom website for a small business. Experience in HTML, CSS, and JavaScript required.</p>
+                <p>Pay: R1500 - R3000</p>
+                <a href="#">Apply Now</a>
+            </div>
 
-        <!-- Career Advice Articles Section -->
-        <div class="sub-section">
-            <h3>Career Advice Articles</h3>
-            <p>Read blogs and articles offering tips on career changes, resume writing, interview preparation, and more. Stay ahead in your job search with expert advice.</p>
-            <a href="#">Read Career Advice Articles</a>
+            <!-- Gig 2 -->
+            <div class="gig-card">
+                <h4>Graphic Designer</h4>
+                <p>Platform: Fiverr</p>
+                <p>Description: Design a logo and branding materials for an online store.</p>
+                <p>Pay: R300 - R600</p>
+                <a href="#">Apply Now</a>
+            </div>
+
+            <!-- Gig 3 -->
+            <div class="gig-card">
+                <h4>Content Writer</h4>
+                <p>Platform: Freelancer</p>
+                <p>Description: Write blog posts and articles on topics related to travel and tourism.</p>
+                <p>Pay: R350 per article</p>
+                <a href="#">Apply Now</a>
+            </div>
         </div>
     </div>
 </section>

@@ -104,10 +104,31 @@
             text-decoration: none;
             margin-top: 10px;
             font-size: 18px;
+            cursor: pointer;
         }
 
         .resource-section a:hover {
             text-decoration: underline;
+        }
+
+        /* Loading spinner styling */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #FF5D92;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Footer styling */
@@ -145,7 +166,7 @@
     <div class="resource-section">
         <h3>Business Plan Templates</h3>
         <p>Kickstart your entrepreneurial journey by using these free business plan templates. Tailor them to suit your business needs and secure the funding you need to grow.</p>
-        <a href="#">Download Business Plan Templates</a>
+        <a href="#" id="downloadLink">Download Business Plan Templates</a>
     </div>
 
     <!-- Funding Options -->
@@ -170,9 +191,28 @@
     </div>
 </section>
 
+<!-- Loading Spinner -->
+<div class="loading" id="loadingSpinner"></div>
+
 <footer>
     <p>&copy; 2024 Career Spark. All rights reserved.</p>
 </footer>
+
+<script>
+    document.getElementById('downloadLink').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the actual download
+
+        // Show the loading spinner
+        const spinner = document.getElementById('loadingSpinner');
+        spinner.style.display = 'block';
+
+        // Hide the spinner after 3 seconds (simulate download time)
+        setTimeout(function() {
+            spinner.style.display = 'none';
+            alert('Download complete!');
+        }, 3000); // 3 seconds delay
+    });
+</script>
 
 </body>
 </html>

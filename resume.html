@@ -129,6 +129,17 @@
             display: inline-block;
             margin-bottom: 10px;
         }
+
+        /* Success message styling */
+        .success-message {
+            display: none;
+            text-align: center;
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -140,15 +151,16 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li>
-                <a href="#">Explore Opportunities</a>
-            </li>
+            <li><a href="#">Explore Opportunities</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="section-container">
     <h2>Build Your Resume</h2>
+    <!-- Success message -->
+    <div class="success-message" id="successMessage">Resume Generated Successfully!</div>
+
     <form id="resumeForm">
         <label for="fullName">Full Name:</label>
         <input type="text" id="fullName" name="fullName" required>
@@ -181,6 +193,16 @@
 <footer>
     <p>&copy; 2024 Career Spark. All rights reserved.</p>
 </footer>
+
+<script>
+    document.getElementById("resumeForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevent form submission
+
+        // Show success message
+        var successMessage = document.getElementById("successMessage");
+        successMessage.style.display = "block";
+    });
+</script>
 
 </body>
 </html>

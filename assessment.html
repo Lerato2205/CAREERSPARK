@@ -140,6 +140,34 @@
         .sub-section p {
             color: #FFFFFF;
         }
+
+        /* Assessment Form Styling */
+        .assessment-form {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .assessment-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .assessment-form input[type="text"], 
+        .assessment-form input[type="email"], 
+        .assessment-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .assessment-form button {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -151,38 +179,36 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li>
-                <a href="#">Explore Opportunities</a>
-            </li>
+            <li><a href="#">Explore Opportunities</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="section-container">
-    <div class="opportunity-section">
-        <h2>Career Guidance</h2>
-        <p>Discover various career paths, take assessments to match your personality to the right job, and get career advice tailored to your needs.</p>
 
-        <!-- Career Paths Section -->
-        <div class="sub-section">
-            <h3>Career Paths</h3>
-            <p>Explore different career paths in various industries, understand growth potential, and learn about required qualifications for each path.</p>
-            <a href="#">Learn More About Career Paths</a>
-        </div>
+    <!-- Assessment Form Section -->
+    <div class="assessment-form">
+        <h3>Take an Assessment</h3>
+        <p>Fill out the form below to start your assessment:</p>
+        <form action="#" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <!-- Personality & Skill Assessments Section -->
-        <div class="sub-section">
-            <h3>Personality & Skill Assessments</h3>
-            <p>Take quizzes and assessments to help you discover careers that match your personality and skill set. These tools guide you toward a fulfilling career.</p>
-            <a href="assessment.html">Take an Assessment</a>
-        </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <!-- Career Advice Articles Section -->
-        <div class="sub-section">
-            <h3>Career Advice Articles</h3>
-            <p>Read blogs and articles offering tips on career changes, resume writing, interview preparation, and more. Stay ahead in your job search with expert advice.</p>
-            <a href="#">Read Career Advice Articles</a>
-        </div>
+            <label for="career-interest">Career Interest:</label>
+            <select id="career-interest" name="career-interest" required>
+                <option value="">Select your interest</option>
+                <option value="technology">Technology</option>
+                <option value="business">Business</option>
+                <option value="health">Health</option>
+                <option value="education">Education</option>
+                <option value="creative">Creative Arts</option>
+            </select>
+
+            <button type="submit">Start Assessment</button>
+        </form>
     </div>
 </section>
 
